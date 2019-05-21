@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.guiritter</groupId>
-  <artifactId>wavelet-transform</artifactId> 
-  <version>1.0.1</version> 
+  <artifactId>sequential-text-file-saver</artifactId> 
+  <version>1.0.0</version> 
   <packaging>jar</packaging>
 
-  <name>Wavelet Transform</name> 
-  <description>Computes the wavelet transform of 1D signals and 2D images</description> 
-  <url>https://github.com/GuiRitter/WaveletTransform</url> 
+  <name>Sequential Text File Saver</name> 
+  <description>Reads text from a graphical component and saves it as a text file with a sequential name</description> 
+  <url>https://github.com/GuiRitter/SequentialTextFileSaver</url> 
 
   <licenses> 
     <license> 
@@ -29,29 +29,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
     <maven.compiler.source>1.8</maven.compiler.source> 
     <maven.compiler.target>1.8</maven.compiler.target> 
-    <exec.mainClass>io.github.guiritter.wavelet.Main</exec.mainClass> 
+    <exec.mainClass>io.github.guiritter.sequential_text_file_saver.Main</exec.mainClass> 
   </properties>
 
   <repositories>
-    <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
-    </repository>
   </repositories>
 
   <dependencies>
-    <dependency>
-      <groupId>com.github.GuiRitter</groupId>
-      <artifactId>ImageComponent</artifactId>
-      <version>master-SNAPSHOT</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
-    <dependency>
-        <groupId>org.jfree</groupId>
-        <artifactId>jfreechart</artifactId>
-        <version>1.0.19</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -61,7 +45,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.2</version>
-        <configuration> <!-- Compile java 7 compatible bytecode -->
+        <configuration> <!-- Compile java 8 compatible bytecode -->
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
@@ -79,7 +63,7 @@
             <configuration>
               <archive>
               <manifest>
-                <mainClass>io.github.guiritter.wavelet.Main</mainClass>
+                <mainClass>io.github.guiritter.sequential_text_file_saver.Main</mainClass>
               </manifest>
               </archive>
               <descriptorRefs>
